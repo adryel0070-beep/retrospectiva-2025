@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #d4af37;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  min-height: 100vh; /* e não height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  line-height: 1.4;
+}
+
+button {
+  margin-top: 40px;
+  padding: 12px 28px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  cursor: pointer;
+}
+.carousel-section {
+  padding: 80px 0;
+  background: #0b0b0b;
+}
+.carousel-section {
+  padding: 120px 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.caption {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: rgba(212, 175, 55, 0.85);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+button:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* Animação base */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação da legenda */
+.caption {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: rgba(212, 175, 55, 0.85);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.swiper-slide-active .caption {
+  opacity: 1;
+}
+.calendar-section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.calendar-section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 16px;
+  max-width: 420px;
+  margin: 0 auto 40px;
+}
+
+.calendar-day {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 14px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.calendar-day:hover {
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.calendar-content {
+  max-width: 500px;
+  margin: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.calendar-content.show {
+  opacity: 1;
+}
+.finale-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.finale-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 32px;
+}
+
+.finale-section p {
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 24px;
+  color: rgba(212, 175, 55, 0.9);
+}
+
+.finale-section p strong {
+  font-weight: 600;
+}
+
+.finale-sign {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.page-header {
+  width: 100%;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #000000, #111111);
+  color: #d4af37;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.header-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.header-text p {
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
